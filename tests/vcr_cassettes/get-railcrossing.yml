@@ -1,0 +1,59 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Content-Type:
+      - application/json
+      X-API-KEY:
+      - reticulatingsplines
+      accept:
+      - application/json
+    method: GET
+    uri: https://octane.mvillage.um.city/api/railcrossing/1
+  response:
+    body:
+      string: '{"railcrossing":{"audible":true,"beacon":"flashing","gate":true,"id":1,"instrument":"gated","latitude":42.2972840,"longitude":-83.7025330,"name":"Monorail","phases":"preflash,
+        closing, closed, opening, postflash, open","state":{"activated":true,"audible":true,"beacon":true,"gate":true,"manualCall":true,"phase":"closed","updated":"2022-11-29T20:56:11+00:00"},"uri":"https://mcity.um.city/api/railcrossing/1","url":null}}
+
+        '
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '422'
+      Content-Security-Policy:
+      - 'default-src ''self'' ''unsafe-inline'' *.um.city; font-src ''self'' fonts.googleapis.com
+        fonts.gstatic.com; style-src ''self'' ''unsafe-inline'' fonts.googleapis.com
+        fonts.gstatic.com static.um.city cdnjs.cloudflare.com; script-src ''self''
+        ''unsafe-inline'' code.jquery.com cdnjs.cloudflare.com static.um.city; img-src
+        ''self'' data: static.um.city'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 29 Nov 2022 21:00:25 GMT
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - gunicorn/20.0.4
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+      X-Content-Security-Policy:
+      - 'default-src ''self'' ''unsafe-inline'' *.um.city; font-src ''self'' fonts.googleapis.com
+        fonts.gstatic.com; style-src ''self'' ''unsafe-inline'' fonts.googleapis.com
+        fonts.gstatic.com static.um.city cdnjs.cloudflare.com; script-src ''self''
+        ''unsafe-inline'' code.jquery.com cdnjs.cloudflare.com static.um.city; img-src
+        ''self'' data: static.um.city'
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+version: 1

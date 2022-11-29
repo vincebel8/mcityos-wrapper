@@ -1,3 +1,4 @@
+import vcr
 from mcityoswrapper import McityOSIntersections
 from pytest import fixture
 

@@ -1,3 +1,4 @@
+import vcr
 from mcityoswrapper import McityOSRail
 from pytest import fixture
 
