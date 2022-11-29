@@ -6,8 +6,7 @@ def intersection_keys():
         return ['id', 'instrument']
 
 def test_intersection(intersection_keys):
-        mcityos_instance = McityOSIntersections(1)
-        response = mcityos_instance.get_intersection()
+        response = McityOSIntersections.get_intersection(1)
 
         assert isinstance(response, dict)
         assert response['intersection']['instrument'] == 'signal', "signal in response"

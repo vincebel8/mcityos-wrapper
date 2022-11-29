@@ -4,9 +4,6 @@ prefix = 'https://octane.mvillage.um.city/api'
 
 class McityOSIntersections(object):
 
-        def __init__(self, id):
-                self.id = id
-
         @staticmethod
         def get_intersections():
                 url = prefix + '/intersections'
@@ -15,7 +12,7 @@ class McityOSIntersections(object):
                 print("Running...")
                 return response.json()
 
-        def get_intersection(self):
-                url = prefix + '/intersection/{}'.format(self.id)
+        def get_intersection(id):
+                url = prefix + '/intersection/{}'.format(id)
                 response = session.get(url)
                 return response.json()
