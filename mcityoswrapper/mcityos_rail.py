@@ -17,8 +17,15 @@ class McityOSRail(object):
                 response = session.get(url)
                 return response.json()
 
-        def trigger_railcrossing(self):
-                url = prefix + '/railcrossing/{}'.format(self.id)
-                body = "{ 'state': { 'manualCall': true, 'manualCallTimeOverride': 10 } }"
-                response = session.patch(url, body)
+        def trigger_railcrossing(id):
+                url = prefix + '/railcrossing/{}'.format(id)
+
+                json_data = {
+                    'state': {
+                        'manualCall': True,
+                        'manualCallTimeOverride': 10,
+                    },
+                }
+
+                response = session.patch(url, json=json_data)
                 return response.json()

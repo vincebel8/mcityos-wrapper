@@ -13,7 +13,11 @@ if OCTANE_API_KEY is None:
 
 session = requests.Session()
 session.params = {}
-session.headers = {'X-API-KEY': OCTANE_API_KEY}
+session.headers = {
+    'accept': 'application/json',
+    'X-API-KEY': OCTANE_API_KEY,
+    'Content-Type': 'application/json',
+}
 
 from .mcityos_intersections import McityOSIntersections
 from .mcityos_rail import McityOSRail
