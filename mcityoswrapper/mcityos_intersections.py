@@ -1,10 +1,8 @@
-#mcityos_wrapper.py
-
 from . import session
 
 prefix = 'https://octane.mvillage.um.city/api'
 
-class McityOS(object):
+class McityOSIntersections(object):
 
         def __init__(self, id):
                 self.id = id

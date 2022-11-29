@@ -15,4 +15,5 @@ session = requests.Session()
 session.params = {}
 session.headers = {'X-API-KEY': OCTANE_API_KEY}
 
-from .mcityos import McityOS
+from .mcityos_intersections import McityOSIntersections
+from .mcityos_rail import McityOSRail
