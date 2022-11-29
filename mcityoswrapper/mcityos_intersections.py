@@ -8,8 +8,6 @@ class McityOSIntersections(object):
         def get_intersections():
                 url = prefix + '/intersections'
                 response = session.get(url)
-                print(response)
-                print("Running...")
                 return response.json()
 
         def get_intersection(id):

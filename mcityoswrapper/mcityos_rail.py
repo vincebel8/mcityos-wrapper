@@ -8,8 +8,6 @@ class McityOSRail(object):
         def get_railcrossings():
                 url = prefix + '/railcrossings'
                 response = session.get(url)
-                print(response)
-                print("Running...")
                 return response.json()
 
         def get_railcrossing(id):
@@ -19,7 +17,6 @@ class McityOSRail(object):
 
         def trigger_railcrossing(id):
                 url = prefix + '/railcrossing/{}'.format(id)
-
                 json_data = {
                     'state': {
                         'manualCall': True,
