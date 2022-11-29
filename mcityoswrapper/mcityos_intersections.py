@@ -8,14 +8,14 @@ class McityOSIntersections(object):
                 self.id = id
 
         @staticmethod
-        def intersections():
-                path = prefix + '/intersections'
-                response = session.get(path)
+        def get_intersections():
+                url = prefix + '/intersections'
+                response = session.get(url)
                 print(response)
                 print("Running...")
                 return response.json()
 
-        def intersection(self):
-                path = 'https://octane.mvillage.um.city/api/intersection/{}'.format(self.id)
-                response = session.get(path)
+        def get_intersection(self):
+                url = prefix + '/intersection/{}'.format(self.id)
+                response = session.get(url)
                 return response.json()

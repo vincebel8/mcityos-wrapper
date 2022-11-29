@@ -8,14 +8,20 @@ class McityOSRail(object):
                 self.id = id
 
         @staticmethod
-        def railcrossings():
-                path = prefix + '/railcrossings'
-                response = session.get(path)
+        def get_railcrossings():
+                url = prefix + '/railcrossings'
+                response = session.get(url)
                 print(response)
                 print("Running...")
                 return response.json()
 
-        def railcrossing(self):
-                path = 'https://octane.mvillage.um.city/api/railcrossing/{}'.format(self.id)
-                response = session.get(path)
+        def get_railcrossing(self):
+                url = prefix + '/railcrossing/{}'.format(self.id)
+                response = session.get(url)
+                return response.json()
+
+        def trigger_railcrossing(self):
+                url = prefix + '/railcrossing/{}'.format(self.id)
+                body = "{ 'state': { 'manualCall': true, 'manualCallTimeOverride': 10 } }"
+                response = session.patch(url, body)
                 return response.json()
